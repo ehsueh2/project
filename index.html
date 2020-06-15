@@ -5,36 +5,101 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Project Proposal</title>
     <style type="text/css">
-        h1 {
+        /* Global Settings */
+
+        body {
             font-family: Arial, Helvetica, sans-serif;
-            color: black;
         }
-        p {
-            font-family: Arial, Helvetica, sans-serif;
+        h1 {
+            text-align: center;
+        }
+        /* Navigation Bar Settings */
+        .navbar {
+            width:100%;
+            border: 2px solid white;
+            border-collapse: collapse;
+            text-align:center;
+        }
+        /* Table Settings */
+        .destinationtable {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding:0.5em;
+        }
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding:0.5em;
+
+        }
+        .tableimg {
+            width:10em;
         }
      </style>    
   </head>
   <body>
-    <!--nav menu-->
+
 
     <h1>Travel to Taipei</h1>
-    <p>Hi there! This website is travel reccomendations to Taipei. This includes restauraunt and food recomendation and fun places to go. Below is a list of popular destinations within Taipei. Click the destination in the table below to find out more!</p>
-
-    <table>
-        <caption>
-            AirPods 
-        </caption> 
-         <tr height="50%">
-            <td width="15%"><b>AirPods Pro</b></td> <td width="30%"><img src="images/airpods-pro.jpg" width="150px"><td width="30%">AirPods Pro</td> <td width="10%">$249.00</td> <td width="10%"><button type="button"><a href="https://www.apple.com/shop/product/MWP22AM/A/airpods-pro">Buy</a></button></td>
-        </tr>
-        <tr height="25%">
-            <td width="15%" rowspan="2"><b>AirPods</b></td> <td width="30%" rowspan="2"><img src="images/airpods.jpg" width="150px"><td width="30%">AirPods with Wireless Charging Case</td> <td width="10%">$199.00</td> <td width="10%"><button type="button"><a href="https://www.apple.com/shop/product/MRXJ2/airpods-with-wireless-charging-case">Buy</a></button></td>
-        </tr>
-        <tr height="25%">
-            </td> <td width="30%">AirPods with Charging Case</td> <td width="10%"><s>$159.00</s><p id="discount">$129.00</p></td> <td width="10%"><button type="button"><a href="https://www.apple.com/shop/product/MV7N2/airpods-with-charging-case">Buy</a></button></td>
-        </tr>
-        
+    <hr>
+    <!--navbar menu-->
+    <table class="navbar">
+        <tbody>
+            <tr>
+                <td><strong>Homepage</strong></td>
+                <td><strong>Contact Us</strong></td>
+                <td><strong>Sightmap</strong></td>
+            </tr>
+        </tbody>
     </table>
-    
+    <hr>
+
+    <p>Hi there! This website is travel recomendations to Taipei. This includes tourist attractions and food recomendation and fun places to go. Below is a list of popular destinations within Taipei. Click the destination in the table below to find out more!</p>
+
+    <table class="destinationtable">
+        <tbody>
+            <tr>
+                <td><strong>Destination</strong></td>
+                <td><strong>Image</strong></td>
+                <td><strong>Rating</strong></td>
+                <td><strong>Review Link</strong></td>
+            </tr>
+            <tr>
+                <td>Taipei 101</td>
+                <td><img src="images/taipei101.jpg" title="Taipei 101" alt="Taipei 101" class="tableimg"></td>
+                <td>5/5</td>
+                <td>Review</td>
+            </tr>
+            <tr>
+                <td>National Palace Museum</td>
+                <td><img src="images/nationalpalace.jpg" title="National Palace Museum" alt="National Palace Museum" class="tableimg"></td>
+                <td>3/5</td>
+                <td>Review</td>
+            </tr>
+            <tr>
+                <td>Yangmingshan National Park</td>
+                <td><img src="images/yangmingshan.jpg" title="Yangminshan National Park" alt="Yangminshan National Park" class="tableimg"></td>
+                <td>4/5</td>
+                <td>Review</td>
+            </tr>
+            <tr>
+                <td>Shilin Night Market</td>
+                <td><img src="images/shilin.jpg" title="Shilin Night Market" alt="Shilin Night Market" class="tableimg"></td>
+                <td>5/5</td>
+                <td>Review</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h2>Vote for the next destination to be reviewed!</h2>
+    <form>
+        
+    </form>
+
   </body>
 </html>
