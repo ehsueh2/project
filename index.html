@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Project Proposal</title>
+    <title>Travel 2 Taipei - By Elina</title>
     <style type="text/css">
         /* Global Settings */
 
@@ -11,6 +11,9 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         h1 {
+            text-align: center;
+        }
+        h3 {
             text-align: center;
         }
         /* Navigation Bar Settings */
@@ -40,20 +43,25 @@
         .tableimg {
             width:10em;
         }
+        /* Form Settings */
+        #submit {
+            padding:1em;
+        }
      </style>    
   </head>
   <body>
 
 
     <h1>Travel to Taipei</h1>
+    <h3>by Elina Hsueh</h3>
     <hr>
     <!--navbar menu-->
     <table class="navbar">
         <tbody>
             <tr>
-                <td><strong>Homepage</strong></td>
-                <td><strong>Contact Us</strong></td>
-                <td><strong>Sightmap</strong></td>
+                <td><strong><a href="index.html">Homepage</a></strong></td>
+                <td><strong><a href="contact.html">Contact Us</a></strong></td>
+                <td><strong><a href="sitemap.html">Sitemap</a></strong></td>
             </tr>
         </tbody>
     </table>
@@ -73,13 +81,13 @@
                 <td>Taipei 101</td>
                 <td><img src="images/taipei101.jpg" title="Taipei 101" alt="Taipei 101" class="tableimg"></td>
                 <td>5/5</td>
-                <td>Review</td>
+                <td><a href="taipei101.html">Review</a></td>
             </tr>
             <tr>
                 <td>National Palace Museum</td>
                 <td><img src="images/nationalpalace.jpg" title="National Palace Museum" alt="National Palace Museum" class="tableimg"></td>
                 <td>3/5</td>
-                <td>Review</td>
+                <td><a href="nationalpalace.html">Review</a></td>
             </tr>
             <tr>
                 <td>Yangmingshan National Park</td>
@@ -96,10 +104,34 @@
         </tbody>
     </table>
     <br>
+    <h2>Preview next week's destination!</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IahFyjrjjzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
     <h2>Vote for the next destination to be reviewed!</h2>
     <form>
-        
+        <fieldset>
+            <legend>Next Destination</legend>
+            <div>
+                <div>
+                <label for="destination">Where we you like to see reviewed next?</label>
+                <select name="destination" id="dest-select">
+                <option value="xiangshan">Xiangshan</option>
+                <option value="lungshan">Lungshan Temple</option>
+                <option value="taipeizoo">Taipei Zoo</option>
+                </select>
+                </div>
+            </div>
+            <!-- section for submit/reset buttons-->
+            <div id="submit">
+                <button type="submit" name="submit-button">Submit</button>
+                <button type="reset" name="reset-button">Reset</button>
+            </div>
+        </fieldset>
     </form>
 
   </body>
 </html>
+
+<!-- 
+“I, Elina, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work"
+-->
