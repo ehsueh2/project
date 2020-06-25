@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/* Global Settings */
+
+body {
+    font-family: "Lato";
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+/* Navigation Bar Settings */
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #808080;
+    width: 100%;
+}
+
+li.nav {
+    float: left;
+    width: 25%;
+}
+
+li.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.nav a:hover {
+    background-color: #111;
+}
+
+
+/*Footer - Credits */
+
+#credits {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.25em;
+}

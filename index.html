@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <meta name="description" content="A brief guide on tourist destinations within Taipei. Be sure to vote for our next destination!">
+    <meta name="keywords" content="taipei,travel,tourism,101">
+    <meta name="author" content="Elina Hsueh">
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Travel 2 Taipei - By Elina</title>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170163693-1"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170163693-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            gtag('config', 'UA-170163693-1');
-            </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
+        gtag('config', 'UA-170163693-1');
+    </script>
+    <!-- External Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- Internal Stylesheet-->
     <style type="text/css">
-        /* Global Settings */
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
+        /* Body Text Settings */
+        /* This h3 CSS is overriding the external stylesheet h3 */
+        
         h3 {
-            text-align: center;
-        }
-        /* Navigation Bar Settings */
-        .navbar {
-            width:100%;
-            border: 2px solid white;
-            border-collapse: collapse;
-            text-align:center;
+            padding: 0.025em;
         }
         /* Table Settings */
+        
         .destinationtable {
-            border: 1px solid black;
+            border: 1.5px solid black;
             border-collapse: collapse;
             text-align: center;
-            padding:0.5em;
+            padding: 0.5em;
+            margin-right: auto;
+            margin-left: auto;
         }
+        
         th {
-            border: 1px solid black;
+            border: 2px solid black;
             border-collapse: collapse;
         }
+        
         td {
             border: 1px solid black;
             border-collapse: collapse;
-            padding:0.5em;
-
+            padding: 0.5em;
         }
+        
         .tableimg {
-            width:10em;
+            width: 10em;
         }
         /* Form Settings */
+        
         #submit {
-            padding:1em;
+            padding: 1em;
         }
-     </style>    
-  </head>
-  <body>
+    </style>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
 
+<body>
+
+    <!--Javscript to insert consistent nav bar across all pages-->
+    <nav id="navbar"></nav>
+    <script src="nav.js"></script>
 
     <h1>Travel to Taipei</h1>
     <h3>by Elina Hsueh</h3>
-    <hr>
-    <!--navbar menu-->
-    <table class="navbar">
-        <tbody>
-            <tr>
-                <td><strong><a href="index.html">Homepage</a></strong></td>
-                <td><strong><a href="contact.html">Contact Us</a></strong></td>
-                <td><strong><a href="sitemap.html">Sitemap</a></strong></td>
-            </tr>
-        </tbody>
-    </table>
-    <hr>
+
+
 
     <p>Hi there! This website is travel recomendations to Taipei. This includes tourist attractions and food recomendation and fun places to go. Below is a list of popular destinations within Taipei. Click the destination in the table below to find out more!</p>
 
@@ -89,27 +87,35 @@
             </tr>
             <tr>
                 <td>Taipei 101</td>
-                <td><img src="images/taipei101.jpg" title="Taipei 101" alt="Taipei 101" class="tableimg"></td>
-                <td>5/5</td>
+                <td>
+                    <a href="taipei101.html"><img src="images/taipei101.jpg" title="Taipei 101" alt="Taipei 101" class="tableimg"></a>
+                </td>
+                <td>&#11088;&#11088;&#11088;&#11088;&#11088;</td>
                 <td><a href="taipei101.html">Review</a></td>
             </tr>
             <tr>
                 <td>National Palace Museum</td>
-                <td><img src="images/nationalpalace.jpg" title="National Palace Museum" alt="National Palace Museum" class="tableimg"></td>
-                <td>3/5</td>
+                <td>
+                    <a href="nationalpalace.html"><img src="images/nationalpalace.jpg" title="National Palace Museum" alt="National Palace Museum" class="tableimg"></a>
+                </td>
+                <td>&#11088;&#11088;&#11088;</td>
                 <td><a href="nationalpalace.html">Review</a></td>
             </tr>
             <tr>
                 <td>Yangmingshan National Park</td>
-                <td><img src="images/yangmingshan.jpg" title="Yangminshan National Park" alt="Yangminshan National Park" class="tableimg"></td>
-                <td>4/5</td>
-                <td>Review</td>
+                <td>
+                    <a href="yangmingshan.html"><img src="images/yangmingshan.jpg" title="Yangminshan National Park" alt="Yangminshan National Park" class="tableimg"></a>
+                </td>
+                <td>&#11088;&#11088;&#11088;&#11088;</td>
+                <td><a href="yangmingshan.html">Review</a></td>
             </tr>
             <tr>
                 <td>Shilin Night Market</td>
-                <td><img src="images/shilin.jpg" title="Shilin Night Market" alt="Shilin Night Market" class="tableimg"></td>
-                <td>5/5</td>
-                <td>Review</td>
+                <td>
+                    <a href="shilin.html"><img src="images/shilin.jpg" title="Shilin Night Market" alt="Shilin Night Market" class="tableimg"></a>
+                </td>
+                <td>&#11088;&#11088;&#11088;&#11088;&#11088;</td>
+                <td><a href="shilin.html">Review</a></td>
             </tr>
         </tbody>
     </table>
@@ -123,12 +129,12 @@
             <legend>Next Destination</legend>
             <div>
                 <div>
-                <label for="destination">Where we you like to see reviewed next?</label>
-                <select name="destination" id="dest-select">
-                <option value="xiangshan">Xiangshan</option>
-                <option value="lungshan">Lungshan Temple</option>
-                <option value="taipeizoo">Taipei Zoo</option>
-                </select>
+                    <label for="destination">Where we you like to see reviewed next?</label>
+                    <select name="destination" id="dest-select">
+                        <option value="xiangshan">Xiangshan</option>
+                        <option value="lungshan">Lungshan Temple</option>
+                        <option value="taipeizoo">Taipei Zoo</option>
+                    </select>
                 </div>
             </div>
             <!-- section for submit/reset buttons-->
@@ -138,8 +144,12 @@
             </div>
         </fieldset>
     </form>
+    <div id="credits">
+        <a href="credits.html">Credits</a>
+    </div>
 
-  </body>
+</body>
+
 </html>
 
 <!-- 

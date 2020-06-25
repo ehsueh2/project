@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Taipei 101</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170163693-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-170163693-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style type="text/css">
-        /* Global Settings */
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
-        h3 {
-            text-align: center;
-        }
-        /* Navigation Bar Settings */
-        .navbar {
-            width:100%;
-            border: 2px solid white;
-            border-collapse: collapse;
-            text-align:center;
-        }
         /* Table Settings */
-        .destinationtable {
-            border: 1px solid black;
-            border-collapse: collapse;
-            text-align: center;
-            padding:0.5em;
+        
+        table {
+            margin: 0 auto;
         }
+        
         th {
-            border: 1px solid black;
+            border: none;
             border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
         }
+        
         td {
-            border: 1px solid black;
+            border: none;
             border-collapse: collapse;
-            padding:0.5em;
-
+            padding: 0.5em;
         }
+        
         .tableimg {
-            width:10em;
+            width: 20em;
         }
         /* Form Settings */
+        
         #submit {
-            padding:1em;
+            padding: 1em;
         }
-     </style>    
-  </head>
-  <body>
+    </style>
+</head>
 
+<body>
+    <!--Javscript to insert consistent nav bar across all pages-->
+    <nav id="navbar"></nav>
+    <script src="nav.js"></script>
 
     <h1>Taipei 101</h1>
-    <hr>
-    <!--navbar menu-->
-    <table class="navbar">
+
+    <table class="grid">
         <tbody>
             <tr>
-                <td><strong><a href="index.html">Homepage</a></strong></td>
-                <td><strong><a href="contact.html">Contact Us</a></strong></td>
-                <td><strong><a href="sitemap.html">Sitemap</a></strong></td>
+                <td><img src="/images/taipei101-1.jpg" class="tableimg"></td>
+                <td><img src="/images/taipei101-2.jpg" class="tableimg"></td>
             </tr>
         </tbody>
     </table>
-    <hr>
-    <p>Believe it or not, the Taipei 101 actually has 106 floors, including 5 basement floors (parking garage). This is a very popular tourist attraction in Taipei. There are an enormous amount of stores and restaurants to try out. You can travel to the 88th floor which is the observatory deck. </p>
 
-    <p>With construction starting in October 1997, the towers opened to public in 2004. It is equipped with structural mechanisms to mitigate damage from Earthquakes</p>
+    <p>
+        Towering above the city like the gigantic bamboo stalk it was designed to resemble, Taipei 101 is impossible to miss. At 508m, Taipei 101 held the title of 'world's tallest building' for a number of years. Until 2011, it also held the title of the world's
+        tallest green building.
+    </p>
 
-  </body>
+    <p>
+
+        Ticket sales are on the 5th floor of the Taipei 101 Shopping Mall. The pressure-controlled lift up is quite a rush; at 1010m per minute it takes a mere 40 seconds to get from ground level to the 89th-floor observation deck. Observation decks are on the
+        88th and 89th floors, with an outdoor deck on the 91st floor opened on some occasions, weather permitting. Don't miss the massive gold-coloured iron wind damper that keeps the tower stable through typhoons and earthquakes. In the basement is a
+        decent food court, and the first five floors are taken up by one of Taipei's swankiest malls. For views of Taipei 101, climb Elephant Mountain or with beer in hand at Zhang Men a few blocks north.
+    </p>
+
+</body>
+
 </html>
 
 <!-- 

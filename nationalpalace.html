@@ -1,74 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>National Palace</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170163693-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-170163693-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <style type="text/css">
-        /* Global Settings */
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
-        h3 {
-            text-align: center;
-        }
-        /* Navigation Bar Settings */
-        .navbar {
-            width:100%;
-            border: 2px solid white;
-            border-collapse: collapse;
-            text-align:center;
-        }
         /* Table Settings */
-        .destinationtable {
-            border: 1px solid black;
-            border-collapse: collapse;
-            text-align: center;
-            padding:0.5em;
+        
+        table {
+            margin: 0 auto;
         }
+        
         th {
-            border: 1px solid black;
+            border: none;
             border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
         }
+        
         td {
-            border: 1px solid black;
+            border: none;
             border-collapse: collapse;
-            padding:0.5em;
-
+            padding: 0.5em;
         }
+        
         .tableimg {
-            width:10em;
+            width: 30em;
         }
         /* Form Settings */
+        
         #submit {
-            padding:1em;
+            padding: 1em;
         }
-     </style>    
-  </head>
-  <body>
+    </style>
+</head>
 
+<body>
 
-    <h1>National Palace</h1>
-    <hr>
-    <!--navbar menu-->
-    <table class="navbar">
+    <!--Javscript to insert consistent nav bar across all pages-->
+    <nav id="navbar"></nav>
+    <script src="nav.js"></script>
+    <h1>National Palace Museum</h1>
+
+    <table class="grid">
         <tbody>
             <tr>
-                <td><strong><a href="index.html">Homepage</a></strong></td>
-                <td><strong><a href="contact.html">Contact Us</a></strong></td>
-                <td><strong><a href="sitemap.html">Sitemap</a></strong></td>
+                <td><img src="/images/npm.jpg" class="tableimg"></td>
             </tr>
         </tbody>
     </table>
-    <hr>
-<p>
-    This museum holds ancient artifacts and artwork from Chinese history with a total of 700,000+ pieces. The collection encompasses 8,000 years of history with art from the Neolithic to the modern age. Outside of the museum, there is also a beautiful garden to explore. 
-</p>
-  </body>
+
+    <p>
+        Home to the world's largest and arguably finest collection of Chinese art, this vast hoard covers treasures in painting, calligraphy, statuary, bronzes, lacquerware, ceramics, jade and religious objects. Some of the most popular items, such as the famous
+        Jadeite Cabbage, are always on display – although check first that it's not on loan to the southern branch in Chiayi.
+    </p>
+
+    <p>
+        The museum offers free guided tours in English at 10am and 3pm (book online or register in person about 20 minutes before, limited to 30 people). If you prefer to move about at your own pace, try an English headphone guide (NT$150). There is also a museum
+        gift shop worth exploring.
+    </p>
+    <p>
+        To reach the museum from Shilin MRT station, head out Exit 1 to Zhongzheng Rd and catch the R30 (red 30), minibus 18 or 19, or bus 255, 304 or 815. It's about 15 minutes to the museum. From Dazhi MRT station take bus B13 (brown 13).
+    </p>
+</body>
+
 </html>
 
 <!-- 
