@@ -60,6 +60,24 @@
         #submit {
             padding: 1em;
         }
+        
+        .formdiv {
+            padding: 0.25em;
+        }
+        /* Ad Marquee */
+        
+        div.scroller {
+            position: relative;
+            border: 1px solid black;
+            height: 50px;
+            background-color: white;
+        }
+        
+        #admsg {
+            position: absolute;
+            color: Black;
+            vertical-align: middle;
+        }
     </style>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -88,7 +106,7 @@
             <tr>
                 <td>Taipei 101</td>
                 <td>
-                    <a href="taipei101.html"><img src="images/taipei101.jpg" title="Taipei 101" alt="Taipei 101" class="tableimg"></a>
+                    <a href="taipei101.html"><img src="images/taipei101.jpg" title="Taipei 101" alt="Taipei 101" class="tableimg" id="taipei101img"></a>
                 </td>
                 <td>&#11088;&#11088;&#11088;&#11088;&#11088;</td>
                 <td><a href="taipei101.html">Review</a></td>
@@ -96,7 +114,7 @@
             <tr>
                 <td>National Palace Museum</td>
                 <td>
-                    <a href="nationalpalace.html"><img src="images/nationalpalace.jpg" title="National Palace Museum" alt="National Palace Museum" class="tableimg"></a>
+                    <a href="nationalpalace.html"><img src="images/nationalpalace.jpg" title="National Palace Museum" alt="National Palace Museum" class="tableimg" id="npmimg"></a>
                 </td>
                 <td>&#11088;&#11088;&#11088;</td>
                 <td><a href="nationalpalace.html">Review</a></td>
@@ -104,7 +122,7 @@
             <tr>
                 <td>Yangmingshan National Park</td>
                 <td>
-                    <a href="yangmingshan.html"><img src="images/yangmingshan.jpg" title="Yangminshan National Park" alt="Yangminshan National Park" class="tableimg"></a>
+                    <a href="yangmingshan.html"><img src="images/yangmingshan.jpg" title="Yangminshan National Park" alt="Yangminshan National Park" class="tableimg" id="ymsimg"></a>
                 </td>
                 <td>&#11088;&#11088;&#11088;&#11088;</td>
                 <td><a href="yangmingshan.html">Review</a></td>
@@ -112,7 +130,7 @@
             <tr>
                 <td>Shilin Night Market</td>
                 <td>
-                    <a href="shilin.html"><img src="images/shilin.jpg" title="Shilin Night Market" alt="Shilin Night Market" class="tableimg"></a>
+                    <a href="shilin.html"><img src="images/shilin.jpg" title="Shilin Night Market" alt="Shilin Night Market" class="tableimg" id="shilinimg"></a>
                 </td>
                 <td>&#11088;&#11088;&#11088;&#11088;&#11088;</td>
                 <td><a href="shilin.html">Review</a></td>
@@ -124,34 +142,173 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/IahFyjrjjzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <br>
     <h2>Vote for the next destination to be reviewed!</h2>
-    <form>
+    <form name="myForm" action="POST">
         <fieldset>
             <legend>Next Destination</legend>
-            <div>
+            <div class="formdiv">
                 <div>
                     <label for="destination">Where we you like to see reviewed next?</label>
                     <select name="destination" id="dest-select">
+                        <option value="None">----</option>
                         <option value="xiangshan">Xiangshan</option>
                         <option value="lungshan">Lungshan Temple</option>
                         <option value="taipeizoo">Taipei Zoo</option>
                     </select>
                 </div>
             </div>
+            <div class="formdiv">
+                <div>
+                    <label for="origin">Where did you hear about Travel 2 Taipei?</label>
+                    <select name="origin" id="referral">
+                        <option value="None">----</option>
+                        <option value="Google">Google</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Youtube">Youtube</option>
+                        <option value="Friends">Friends</option>
+                    </select>
+                </div>
+            </div>
             <!-- section for submit/reset buttons-->
             <div id="submit">
-                <button type="submit" name="submit-button">Submit</button>
+                <button type="button" name="submit-button" id="submit-button">Submit</button>
                 <button type="reset" name="reset-button">Reset</button>
             </div>
         </fieldset>
     </form>
+
+    <h2> A note from our sponsors:</h2>
+    <div class="scroller" id="marquee">
+        <h3 id="admsg">This text will move</h3>
+    </div>
+
+    <!-- Javascript codes in body-->
+
+
+    <!--Image change onhover-->
+    <script>
+        function changeimg1() {
+            document.getElementById("taipei101img").src = "images/taipei101alt.jpg";
+        }
+
+        function changeimg1b() {
+            document.getElementById("taipei101img").src = "images/taipei101.jpg";
+        }
+
+        function changeimg2() {
+            document.getElementById("npmimg").src = "images/npmalt.jpg";
+        }
+
+        function changeimg2b() {
+            document.getElementById("npmimg").src = "images/nationalpalace.jpg";
+        }
+
+        function changeimg3() {
+            document.getElementById("ymsimg").src = "images/ymsalt.jpg";
+        }
+
+        function changeimg3b() {
+            document.getElementById("ymsimg").src = "images/yangmingshan.jpg";
+        }
+
+        function changeimg4() {
+            document.getElementById("shilinimg").src = "images/shilinalt.jpg";
+        }
+
+        function changeimg4b() {
+            document.getElementById("shilinimg").src = "images/shilin.jpg";
+        }
+
+        document.getElementById("taipei101img").onmouseover = changeimg1;
+        document.getElementById("taipei101img").onmouseout = changeimg1b;
+
+        document.getElementById("npmimg").onmouseover = changeimg2;
+        document.getElementById("npmimg").onmouseout = changeimg2b;
+
+        document.getElementById("ymsimg").onmouseover = changeimg3;
+        document.getElementById("ymsimg").onmouseout = changeimg3b;
+
+        document.getElementById("shilinimg").onmouseover = changeimg4;
+        document.getElementById("shilinimg").onmouseout = changeimg4b;
+    </script>
+
+    <!--Form Validation-->
+    <script>
+        function validate() {
+            //console.log("none selected!");
+            let x = document.forms["myForm"]["destination"].value;
+            let y = document.forms["myForm"]["origin"].value;
+
+            if (x == "None" || y == "None") {
+                alert("You forgot to select an option!");
+            }
+
+        }
+        document.getElementById("submit-button").onclick = validate;
+    </script>
+
     <div id="credits">
         <a href="credits.html">Credits</a>
+        <a href="#" id="darkmodebtn">Dark Mode</a>
+        <a href="#" id="honorcode">Show Honor Code</a>
     </div>
+
+    <!--Dark Mode Javascript-->
+    <script>
+        function dmon() {
+            console.log("works!");
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            document.querySelector(".destinationtable").style.borderColor = "white";
+        }
+
+        document.getElementById("darkmodebtn").onclick = dmon;
+    </script>
+
+    <!-- Uncommenting honor code Javascript-->
+    <script>
+        function uncomment() {
+            let comment = document.getElementById("comment");
+            comment.innerHTML = comment.innerHTML.replace('<!--', '').replace('-->', '');
+        }
+
+        document.getElementById("honorcode").onclick = uncomment;
+    </script>
+
+    <!--Marquee Scroller-->
+    <script>
+        const adList = [
+            "2x Points on Flights to Songshan Airport! - Taiwan Airlines",
+            "Free night when you book 10 nights! - Grand Central Hotel",
+            "100 TWD biscuits when you order two entrees! - Dan's",
+        ];
+        const admsg = document.getElementById("admsg");
+        let p = 5;
+        let i = 0;
+
+        function marquee() {
+            admsg.innerHTML = adList[i];
+            admsg.style.left = p + "px";
+            if (p > document.getElementById("marquee").clientWidth - 550) {
+                p = 5;
+                i++;
+                if (i === adList.length) {
+                    i = 0;
+                }
+            } else {
+                p = p + 5;
+            }
+            setTimeout(marquee, 40);
+        }
+
+        document.querySelector("body").onload = marquee;
+    </script>
 
 </body>
 
 </html>
 
-<!-- 
+<div id="comment">
+    <!-- 
 “I, Elina, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work"
 -->
+</div>
